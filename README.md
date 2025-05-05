@@ -27,8 +27,6 @@ A simple PHP-based parking reservation system that allows users to sign up, log 
 Project/
 ├── auto_cancel/
 │   ├── auto_cancel.php
-│   ├── cron_log.txt
-│   └── debug_log.txt
 ├── css/
 │   ├── style.css
 │   └── background.jpg
