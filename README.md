@@ -21,31 +21,34 @@ A simple PHP-based parking reservation system that allows users to sign up, log 
 - Points Reward System
 - Clean UI with background image
 
-## 🗂️ Folder Structure
+### 📁 Folder Structure
 
+```
 Project/
 ├── auto_cancel/
-│   └── auto_cancel.php
-│   └── cron_log.txt
+│   ├── auto_cancel.php
+│   ├── cron_log.txt
 │   └── debug_log.txt
 ├── css/
-│   └── style.css
+│   ├── style.css
 │   └── background.jpg
 ├── includes/
-│   └── db.php
+│   ├── db.php
 │   └── functions.php
 ├── pages/
-│   └── login.php
-│   └── signup.php
-│   └── area.php
-│   └── book.php
-│   └── cancel.php
+│   ├── login.php
+│   ├── signup.php
+│   ├── area.php
+│   ├── book.php
+│   ├── cancel.php
 │   └── dashboard.php
 ├── logout.php
 ├── index.php
 ├── .gitignore
 ├── README.md
 └── project_2.0.sql
+```
+
 
 
 
