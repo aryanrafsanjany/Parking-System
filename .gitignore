@@ -1,0 +1,11 @@
+# Ignore logs and cache files
+cron_log.txt
+*.log
+*.tmp
+.DS_Store
+
+# Ignore system and editor folders
+node_modules/
+vendor/
+.idea/
+.vscode/
