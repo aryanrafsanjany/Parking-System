@@ -1,6 +1,4 @@
 <?php
-include('../includes/db.php');
-
 file_put_contents(__DIR__ . "/cron_log.txt", "Cron ran at " . date("Y-m-d H:i:s") . "\n", FILE_APPEND);
 
 // Get bookings older than 1 hour and still active
