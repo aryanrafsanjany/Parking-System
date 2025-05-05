@@ -25,23 +25,28 @@ A simple PHP-based parking reservation system that allows users to sign up, log 
 
 Project/
 ├── auto_cancel/
-│ └── auto_cancel.php
+│   └── auto_cancel.php
+│   └── cron_log.txt
+│   └── debug_log.txt
 ├── css/
-│ └── style.css
+│   └── style.css
+│   └── background.jpg
 ├── includes/
-│ ├── db.php
-│ └── functions.php
+│   └── db.php
+│   └── functions.php
 ├── pages/
-│ ├── login.php
-│ ├── signup.php
-│ ├── area.php
-│ ├── book.php
-│ ├── cancel.php
-│ └── dashboard.php
+│   └── login.php
+│   └── signup.php
+│   └── area.php
+│   └── book.php
+│   └── cancel.php
+│   └── dashboard.php
 ├── logout.php
 ├── index.php
-├── background.jpg
-└── .gitignore
+├── .gitignore
+├── README.md
+└── project_2.0.sql
+
 
 
 ## 🗃️ Database Schema
