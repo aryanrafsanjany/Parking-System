@@ -28,11 +28,12 @@ $user = $user_result->fetch_assoc();
 $area_result = $conn->query("SELECT * FROM AREA");
 
 // Fetch latest booking by this user
-$booking_result = $conn->query("SELECT b.*, p.mall_name FROM BOOKING b 
+$booking_result = $conn->query("SELECT b.*, p.mall_name, p.address FROM BOOKING b 
     JOIN PARKING_LOCATION p ON b.location_id = p.location_id 
     WHERE b.user_id = $user_id ORDER BY booking_time DESC LIMIT 1");
 
 $booking = $booking_result->fetch_assoc();
+
 ?>
 
 <!DOCTYPE html>
@@ -67,6 +68,14 @@ $booking = $booking_result->fetch_assoc();
             <p><strong>Booked At:</strong> <?= $booking['booking_time'] ?></p>
             <p><strong>Free Parking:</strong> <?= $booking['free_parking'] ? 'Yes' : 'No' ?></p>
 
+            <?php
+                $address = $booking['address'];
+                $map_link = "https://www.google.com/maps/search/?api=1&query=" . urlencode($address);
+            ?>
+            <p>
+                <a href="<?= $map_link ?>" target="_blank">🗺️ Show Location on Map</a>
+            </p>
+
             <?php if ($booking['status'] === 'active'): ?>
                 <p><strong>Cancel:</strong> 
                     <a href="cancel.php?id=<?= $booking['booking_id'] ?>">Manual Cancel</a>
@@ -79,6 +88,7 @@ $booking = $booking_result->fetch_assoc();
         <?php else: ?>
             <p>No recent bookings found.</p>
         <?php endif; ?>
+
 
         <a href="../logout.php" style="float:right;">Logout</a>
     </div>

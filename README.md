@@ -20,6 +20,7 @@ A simple PHP-based parking reservation system that allows users to sign up, log 
 - Auto Cancel after 1 Hour (Cron Job)
 - Points Reward System
 - Clean UI with background image
+- Redirect to Google Map for Parking Location
 
 ### 📁 Folder Structure
 
