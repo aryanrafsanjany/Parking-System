@@ -20,10 +20,10 @@ if ($result) {
         $booking_id = $row['booking_id'];
         $location_id = $row['location_id'];
 
-        // Cancel booking
+
         $conn->query("UPDATE BOOKING SET status = 'expired' WHERE booking_id = $booking_id");
 
-        // Free up the spot
+
         $conn->query("UPDATE PARKING_LOCATION SET available_spot = available_spot + 1 WHERE location_id = $location_id");
     }
 } else {
