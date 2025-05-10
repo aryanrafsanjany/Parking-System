@@ -9,25 +9,18 @@ if (!isset($_SESSION['user_id'])) {
 
 $user_id = $_SESSION['user_id'];
 
-// Handle "Completed" button click
 if (isset($_GET['complete_id'])) {
     $booking_id = intval($_GET['complete_id']);
-
-    // Update booking to completed
     $conn->query("UPDATE BOOKING SET status = 'completed' WHERE booking_id = $booking_id AND user_id = $user_id");
 
-    // Add 1 point to the user
     $conn->query("UPDATE USER SET points = points + 1 WHERE user_id = $user_id");
 }
 
-// Get user data
 $user_result = $conn->query("SELECT * FROM USER WHERE user_id = $user_id");
 $user = $user_result->fetch_assoc();
 
-// Fetch areas
 $area_result = $conn->query("SELECT * FROM AREA");
 
-// Fetch latest booking by this user
 $booking_result = $conn->query("SELECT b.*, p.mall_name, p.address FROM BOOKING b 
     JOIN PARKING_LOCATION p ON b.location_id = p.location_id 
     WHERE b.user_id = $user_id ORDER BY booking_time DESC LIMIT 1");
