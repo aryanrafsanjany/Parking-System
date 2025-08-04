@@ -68,7 +68,6 @@ Project/
 ## 📝 Author
 
 **Aryan Rafsanjany**  
-**Evan Yuvraj Munshi**
 GitHub: [@aryanrafsanjany](https://github.com/aryanrafsanjany)
 
 ---
